@@ -4,46 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Hex Clock</title>
 </head>
-<style>
-    body {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        font-size: 5rem;
-        font-family: sans-serif;
-        font-weight: normal;
-    }
-</style>
 <body style="color:white;">
 </body>
-<script>
-    function hexClock() {
-        let date = new Date();
-        let hours = date.getHours().toString();
-        let minutes = date.getMinutes().toString();
-        let seconds = date.getSeconds().toString();
-
-        if (hours.length < 2) {
-            hours = '0' + hours;
-        }
-
-        if (minutes.length < 2) {
-            minutes = '0' + minutes;
-        }
-
-        if (seconds.length < 2) {
-            seconds = '0' + seconds;
-        }
-
-        let clock = hours + minutes + seconds;
-        document.body.style.backgroundColor = '#' + clock;
-        document.body.innerHTML = '#' + clock;
-    }
-
-    hexClock();
-    setInterval(hexClock, 1000);
-</script>
+<script src="js.js"></script>
 </html>
